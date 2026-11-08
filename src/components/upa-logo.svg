@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 270" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Oxford Navy Gradient for 'U' -->
+    <linearGradient id="upa-navy" x1="20" y1="65" x2="210" y2="245" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#174A7E" />
+      <stop offset="45%" stop-color="#0B294B" />
+      <stop offset="100%" stop-color="#061529" />
+    </linearGradient>
+
+    <!-- Brushed Antique Gold Gradient for 'P' & Accents -->
+    <linearGradient id="upa-gold" x1="140" y1="15" x2="295" y2="225" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#C89B4B" />
+      <stop offset="30%" stop-color="#E7C37A" />
+      <stop offset="55%" stop-color="#B38332" />
+      <stop offset="85%" stop-color="#D9B162" />
+      <stop offset="100%" stop-color="#8E621B" />
+    </linearGradient>
+
+    <!-- Deep Slate Teal Gradient for 'A' -->
+    <linearGradient id="upa-teal" x1="275" y1="55" x2="405" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#225B5E" />
+      <stop offset="55%" stop-color="#113F42" />
+      <stop offset="100%" stop-color="#072224" />
+    </linearGradient>
+
+    <!-- Subtle Drop Shadow for Layered Depth -->
+    <filter id="upa-shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="1" dy="2" stdDeviation="1.5" flood-color="#061529" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <g filter="url(#upa-shadow)">
+    <!-- 'P' (Raised Center Metallic Gold Serif) -->
+    <path
+      d="M142 20 H218 C266 20 296 44 296 82 C296 120 264 146 214 146 H198 V141 H212 C246 141 268 118 268 82 C268 45 246 26 210 26 H185 V208 C185 215 178 224 166 228 V20 H142 V15 Z"
+      fill="url(#upa-gold)"
+    />
+    <!-- Top-left serif cap of 'P' -->
+    <path d="M138 16 H220 V22 H138 Z" fill="url(#upa-gold)" />
+
+    <!-- Gold Contour Highlight Under the 'U' Sweep -->
+    <path
+      d="M84 242 C136 254 176 226 198 196 C210 180 222 170 238 168 C222 173 210 186 196 204 C172 234 134 259 84 242 Z"
+      fill="url(#upa-gold)"
+      opacity="0.85"
+    />
+
+    <!-- 'U' (Oxford Navy Serif with Calligraphic Right Tail) -->
+    <path
+      d="M16 68 H68 V74 H54 V168 C54 210 78 232 114 232 C148 232 172 212 194 186 C206 171 220 162 240 162 C224 166 212 176 198 194 C174 225 146 244 108 244 C58 244 28 214 28 166 V74 H16 V68 Z"
+      fill="url(#upa-navy)"
+    />
+
+    <!-- 'A' Crossbar (Metallic Gold Horizontal Bar) -->
+    <path
+      d="M244 167 H324 L327 174 H241 Z"
+      fill="url(#upa-gold)"
+    />
+
+    <!-- 'A' (Deep Slate Teal Serif on Right) -->
+    <path
+      d="M316 54 L388 228 C392 236 398 239 408 240 V245 H350 V240 H364 C368 240 369 236 367 230 L310 92 L288 145 L281 141 L312 54 H316 Z"
+      fill="url(#upa-teal)"
+    />
+
+    <!-- 'TM' Superscript -->
+    <text
+      x="336"
+      y="94"
+      fill="#0B2149"
+      font-family="'Plus Jakarta Sans', 'Inter', Arial, sans-serif"
+      font-size="22"
+      font-weight="800"
+      letter-spacing="1.5"
+    >
+      TM
+    </text>
+  </g>
+</svg>

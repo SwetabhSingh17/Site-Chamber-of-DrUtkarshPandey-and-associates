@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-parchment: #FAF8F5;
+  --color-parchment-deep: #F2EFE9;
+  --color-stone: #EAE6DF;
+  --color-hairline: #DED8CE;
+  --color-hairline-dark: #C9C1B2;
+  --color-navy: #0F1E36;
+  --color-navy-dark: #0A1424;
+  --color-navy-light: #1A2E4E;
+  --color-gold: #B5893E;
+  --color-gold-light: #C99D53;
+  --color-gold-tint: #F7F1E5;
+  --color-teal: #164E4B;
+  --color-teal-light: #1E6662;
+  --color-teal-tint: #E8F1F0;
+  --color-charcoal: #2C353D;
+  --color-muted: #646B73;
+  --color-muted-light: #8E959E;
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+:root {
+  --bg-parchment: #FAF8F5;
+  --bg-surface: #F2EFE9;
+  --border-hairline: #DED8CE;
+  --text-navy: #0F1E36;
+  --accent-gold: #B5893E;
+  --accent-teal: #164E4B;
+  --text-charcoal: #2C353D;
+  --text-muted: #646B73;
+}
+
+/* Editorial typography defaults and smooth scroll */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+/* Bespoke architectural hairline utility */
+.border-hairline {
+  border-color: #DED8CE;
+}
+
+/* Custom scrollbar for scholarly sidebars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #DED8CE;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B5893E;
+}
+
