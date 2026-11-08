@@ -53,3 +53,4 @@ npm run preview
 
 ## Regulatory Notice
 Compliant with Rule 36 of the Bar Council of India Rules. Designed solely for informational, scholarly, and voluntary research purposes.
+
