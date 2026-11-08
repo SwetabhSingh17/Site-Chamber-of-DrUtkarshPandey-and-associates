@@ -25,7 +25,7 @@ export default function App(): React.JSX.Element {
       {/* Viewport Scroll Reset on Route Change */}
       <ScrollToTop />
 
-      <div className="min-h-screen bg-[#FAF8F5] text-[#2C353D] font-sans flex flex-col selection:bg-[#B5893E]/20 selection:text-[#0F1E36]">
+      <div className="min-h-screen bg-[#FAF8F5] text-[#2C353D] font-sans flex flex-col selection:bg-[#B5893E]/20 selection:text-[#0F1E36] overflow-x-hidden">
         {/* 1. Bar Council of India (BCI) Compliance Gate Modal (Global & Session-Persisted) */}
         <BciDisclaimerModal
           forceOpen={bciModalForceOpen}

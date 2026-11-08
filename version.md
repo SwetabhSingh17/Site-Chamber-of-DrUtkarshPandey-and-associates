@@ -1,6 +1,6 @@
 # Version History — Chamber of Dr. Utkarsh Pandey and Associates
 
-> **Current Version:** `1.1.0`  
+> **Current Version:** `1.1.1`  
 > **Release Date:** November 8, 2026  
 > **Repository:** [Site-Chamber-of-DrUtkarshPandey-and-associates](https://github.com/SwetabhSingh17/Site-Chamber-of-DrUtkarshPandey-and-associates)  
 > **Framework:** React 19 • Vite 8 • Tailwind CSS v4 • TypeScript • React Router v7
@@ -8,13 +8,37 @@
 ---
 
 ## 📋 Table of Contents
-- [Version 1.1.0 (Current)](#version-110-current--november-8-2026)
+- [Version 1.1.1 (Current)](#version-111-current--november-8-2026)
+- [Version 1.1.0](#version-110--november-8-2026)
 - [Version 1.0.0 (Initial Release)](#version-100-initial-release--november-8-2026)
 - [Architecture & Standards](#architecture--standards)
 
 ---
 
-## Version 1.1.0 (Current) — November 8, 2026
+## Version 1.1.1 (Current) — November 8, 2026
+### Comprehensive Mobile Content & Layout Alignment Overhaul
+
+#### 1. Horizontal Viewport Overflow Elimination
+- **Root Overflow Prevention**: Enforced `overflow-x-hidden` on `App.tsx` root container to prevent horizontal dragging/shifting on iOS Safari and Android Chrome.
+- **Search Bar Layout Constraints**: Removed `min-w-[320px]` in `ScholarshipSection.tsx` which was causing mobile screens (<360px) to horizontally blow out. Converted search and view mode filters into 100% width mobile-responsive containers (`grid grid-cols-1 sm:grid-cols-2`).
+- **Monospace Eyebrow Badge Calibration**: Replaced fixed 390px+ width in `HeroSection.tsx` with responsive monospace typography (`text-[9.5px] xs:text-[10px] sm:text-[11px] max-w-full truncate sm:whitespace-normal`) to eliminate screen edge collisions.
+
+#### 2. Responsive Monogram & Navigation Scaling (`UpaLogo.tsx`, `Header.tsx`)
+- **Logo Sizing on Small Screens**: Calibrated mark height to `h-9 sm:h-10 lg:h-11` and scaled the title typography (`text-xs sm:text-base lg:text-lg uppercase leading-tight sm:leading-none`) so the trademark monogram and title fit on mobile without irregular multi-line wraps.
+- **Compact Mobile Header**: Refined header bar height to `h-16 sm:h-20` for a tighter, cleaner mobile viewport presence.
+
+#### 3. Structured 2x2 Authority Metrics Grid (`HeroSection.tsx`)
+- **Grid Realignment**: Restructured the 4 metrics cards into a clean 2x2 grid on mobile with internal border dividers (`border-r`, `border-t sm:border-t-0`), removing uneven hanging vertical borders.
+
+#### 4. Tab & Button Realignment
+- **Founder Dossier Tabs (`FounderCredentialsCard.tsx`)**: Reconfigured tabs into `flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-1.5` with `text-[10px] sm:text-xs` to prevent tab label clipping on small viewports.
+- **Chamber Toggle Buttons (`ChambersRegistry.tsx`)**: Refined the dual-chamber switcher with `p-3.5 sm:p-4 leading-snug` and proper icon shrink controls.
+- **Full-Width Action Buttons (`HomePage.tsx`, `PracticeDetail.tsx`, `ConsultationRouter.tsx`)**: Configured primary CTAs with `w-full sm:w-auto justify-center text-center` for balanced visual alignment across all screen sizes.
+- **Practice Matrix Mobile Smooth-Scroll (`PracticeMatrix.tsx`)**: Added automated smooth-scrolling to `#practice-detail-view` upon selecting a practice pillar on mobile devices.
+
+---
+
+## Version 1.1.0 — November 8, 2026
 ### Multi-Page Architectural Migration, BCI Modal Mobile Viewport Fix, and Navigation Polish
 
 #### 1. Mobile BCI Compliance Modal Fix (`src/components/layout/BciDisclaimerModal.tsx`)
@@ -72,3 +96,4 @@
 - **TypeScript Strict Mode**: Fully typed interfaces prefixed with `I` (e.g., `IBciDisclaimerModalProps`, `IPublication`, `IChamberLocation`).
 - **Clean Architecture & SOLID Principles**: Modular components separated by concern (layout, features, pages, data, types).
 - **Zero Build Warnings**: Strict linter, compiler, and Vite production bundle optimization.
+

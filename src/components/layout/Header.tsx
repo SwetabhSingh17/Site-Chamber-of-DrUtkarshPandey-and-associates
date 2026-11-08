@@ -61,10 +61,10 @@ export const Header: React.FC<IHeaderProps> = ({ onOpenBciDisclaimer }) => {
 
       {/* Main Editorial Bar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 gap-3 xl:gap-6">
+        <div className="flex items-center justify-between h-16 sm:h-20 gap-3 xl:gap-6">
           {/* Brand Logo & Monogram */}
           <Link to="/" className="flex items-center shrink-0 focus:outline-hidden">
-            <UpaLogo variant="horizontal" markHeight="h-10 lg:h-11" hideSubtitleOnLg={true} />
+            <UpaLogo variant="horizontal" markHeight="h-9 sm:h-10 lg:h-11" hideSubtitleOnLg={true} />
           </Link>
 
           {/* Desktop Navigation Links (Button-Like Editorial Controls) */}

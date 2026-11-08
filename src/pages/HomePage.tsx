@@ -50,7 +50,7 @@ export const HomePage: React.FC = () => {
 
             <Link
               to="/practice-areas"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0F1E36] hover:bg-[#1A2E4E] text-[#FAF8F5] text-xs font-mono uppercase tracking-wider border border-[#0F1E36] transition-all shrink-0 group shadow-xs"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-[#0F1E36] hover:bg-[#1A2E4E] text-[#FAF8F5] text-xs font-mono uppercase tracking-wider border border-[#0F1E36] transition-all w-full sm:w-auto shrink-0 group shadow-xs text-center"
             >
               <span>Explore Interactive Practice Matrix</span>
               <ArrowRight className="w-3.5 h-3.5 text-[#B5893E] group-hover:translate-x-1 transition-transform" />
@@ -117,7 +117,7 @@ export const HomePage: React.FC = () => {
 
             <Link
               to="/scholarship"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#FAF8F5] hover:bg-[#F2EFE9] text-[#0F1E36] text-xs font-mono uppercase tracking-wider border border-[#DED8CE] transition-all shrink-0"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-[#FAF8F5] hover:bg-[#F2EFE9] text-[#0F1E36] text-xs font-mono uppercase tracking-wider border border-[#DED8CE] transition-all w-full sm:w-auto shrink-0 text-center"
             >
               <span>Open Complete 22 Works Archive</span>
               <ArrowRight className="w-3.5 h-3.5 text-[#164E4B]" />
@@ -181,7 +181,7 @@ export const HomePage: React.FC = () => {
 
             <Link
               to="/timeline"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0F1E36] hover:bg-[#1A2E4E] text-[#FAF8F5] text-xs font-mono uppercase tracking-wider border border-[#0F1E36] transition-all shrink-0"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-[#0F1E36] hover:bg-[#1A2E4E] text-[#FAF8F5] text-xs font-mono uppercase tracking-wider border border-[#0F1E36] transition-all w-full sm:w-auto shrink-0 text-center"
             >
               <span>View Full Career Ledger</span>
               <ArrowRight className="w-3.5 h-3.5 text-[#B5893E]" />
@@ -224,12 +224,13 @@ export const HomePage: React.FC = () => {
       {/* 5. Dual-Seat Chamber Presence & Direct Brief CTA */}
       <section className="py-16 sm:py-20 bg-[#FAF8F5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#0F1E36] text-[#FAF8F5] p-8 sm:p-12 border border-[#DED8CE] relative overflow-hidden">
+          <div className="bg-[#0F1E36] text-[#FAF8F5] p-6 sm:p-12 border border-[#DED8CE] relative overflow-hidden">
             <div className="max-w-3xl space-y-4">
               <span className="font-mono text-xs uppercase tracking-widest text-[#B5893E] font-bold flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-[#B5893E]" /> Dual High Court Seat Presence
+                <MapPin className="w-4 h-4 text-[#B5893E] shrink-0" />
+                <span>Dual High Court Seat Presence</span>
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#FAF8F5] leading-snug">
+              <h2 className="font-serif text-2xl sm:text-4xl font-bold text-[#FAF8F5] leading-snug">
                 Chambers Established in Prayagraj &amp; Lucknow
               </h2>
               <p className="text-xs sm:text-sm text-[#FAF8F5]/80 font-sans leading-relaxed">
@@ -238,10 +239,10 @@ export const HomePage: React.FC = () => {
                 Submit a case brief or schedule a confidential chamber conference.
               </p>
 
-              <div className="pt-4 flex flex-wrap items-center gap-4">
+              <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
                 <Link
                   to="/consultation"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#FAF8F5] text-[#0F1E36] text-xs font-mono uppercase tracking-wider font-semibold hover:bg-[#B5893E] hover:text-[#FAF8F5] transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#FAF8F5] text-[#0F1E36] text-xs font-mono uppercase tracking-wider font-semibold hover:bg-[#B5893E] hover:text-[#FAF8F5] transition-colors w-full sm:w-auto text-center"
                 >
                   <Clock className="w-4 h-4 text-[#B5893E]" />
                   <span>Open Consultation &amp; Briefing Desk</span>
@@ -249,7 +250,7 @@ export const HomePage: React.FC = () => {
 
                 <a
                   href={`tel:${FOUNDER_CREDENTIALS.directPhone.replace(/[^0-9+]/g, '')}`}
-                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#FAF8F5]/10 hover:bg-[#FAF8F5]/20 text-[#FAF8F5] text-xs font-mono uppercase tracking-wider border border-[#FAF8F5]/30 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#FAF8F5]/10 hover:bg-[#FAF8F5]/20 text-[#FAF8F5] text-xs font-mono uppercase tracking-wider border border-[#FAF8F5]/30 transition-colors w-full sm:w-auto text-center"
                 >
                   <Phone className="w-4 h-4 text-[#B5893E]" />
                   <span>Call {FOUNDER_CREDENTIALS.directPhone}</span>

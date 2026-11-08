@@ -223,43 +223,53 @@ _Submitted voluntarily under BCI Rule 36 compliance._`;
 
         {/* --- QUICK ONE-CLICK COPY BAR --- */}
         <div className="bg-[#FAF8F5] border border-[#DED8CE] p-4 sm:p-5 mb-10">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
             <span className="font-mono text-xs uppercase tracking-wider text-[#0F1E36] font-bold flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-[#B5893E]" /> Direct Chamber Registry Hotlinks:
+              <Sparkles className="w-4 h-4 text-[#B5893E] shrink-0" />
+              <span>Direct Chamber Registry Hotlinks:</span>
             </span>
 
-            <div className="flex flex-wrap items-center gap-2.5">
+            <div className="grid grid-cols-1 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2 sm:gap-2.5">
               {/* Copy Phone */}
               <button
                 type="button"
                 onClick={() => copyToClipboard(FOUNDER_CREDENTIALS.directPhone, 'Direct Phone')}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#F2EFE9] hover:bg-[#EAE6DF] border border-[#DED8CE] text-xs font-mono text-[#0F1E36] transition-colors"
+                className="inline-flex items-center justify-between sm:justify-start gap-1.5 px-3 py-1.5 bg-[#F2EFE9] hover:bg-[#EAE6DF] border border-[#DED8CE] text-xs font-mono text-[#0F1E36] transition-colors cursor-pointer"
                 title="Copy Direct Phone Number"
               >
-                <Copy className="w-3.5 h-3.5 text-[#B5893E]" />
-                <span>+91 82997 31098</span>
+                <span className="flex items-center gap-1.5">
+                  <Copy className="w-3.5 h-3.5 text-[#B5893E]" />
+                  <span>+91 82997 31098</span>
+                </span>
+                <span className="sm:hidden text-[10px] text-[#646B73]">Copy</span>
               </button>
 
               {/* Copy Office Desk Email */}
               <button
                 type="button"
                 onClick={() => copyToClipboard(FOUNDER_CREDENTIALS.officeEmail, 'Office Desk Email')}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#F2EFE9] hover:bg-[#EAE6DF] border border-[#DED8CE] text-xs font-mono text-[#0F1E36] transition-colors"
+                className="inline-flex items-center justify-between sm:justify-start gap-1.5 px-3 py-1.5 bg-[#F2EFE9] hover:bg-[#EAE6DF] border border-[#DED8CE] text-xs font-mono text-[#0F1E36] transition-colors cursor-pointer"
                 title="Copy Office Consultation Email"
               >
-                <Copy className="w-3.5 h-3.5 text-[#B5893E]" />
-                <span>Consult@advdrutkarshpandey.com</span>
+                <span className="flex items-center gap-1.5 truncate">
+                  <Copy className="w-3.5 h-3.5 text-[#B5893E] shrink-0" />
+                  <span className="truncate">Consult@advdrutkarshpandey.com</span>
+                </span>
+                <span className="sm:hidden text-[10px] text-[#646B73] shrink-0 ml-1">Copy</span>
               </button>
 
               {/* Copy Founder Desk Email */}
               <button
                 type="button"
                 onClick={() => copyToClipboard(FOUNDER_CREDENTIALS.founderEmail, 'Founder Desk Email')}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#F2EFE9] hover:bg-[#EAE6DF] border border-[#DED8CE] text-xs font-mono text-[#0F1E36] transition-colors"
+                className="inline-flex items-center justify-between sm:justify-start gap-1.5 px-3 py-1.5 bg-[#F2EFE9] hover:bg-[#EAE6DF] border border-[#DED8CE] text-xs font-mono text-[#0F1E36] transition-colors cursor-pointer"
                 title="Copy Founder Counsel Email"
               >
-                <Copy className="w-3.5 h-3.5 text-[#B5893E]" />
-                <span>founder@advdrutkarshpandey.com</span>
+                <span className="flex items-center gap-1.5 truncate">
+                  <Copy className="w-3.5 h-3.5 text-[#B5893E] shrink-0" />
+                  <span className="truncate">founder@advdrutkarshpandey.com</span>
+                </span>
+                <span className="sm:hidden text-[10px] text-[#646B73] shrink-0 ml-1">Copy</span>
               </button>
             </div>
           </div>
@@ -480,7 +490,7 @@ _Submitted voluntarily under BCI Rule 36 compliance._`;
             </div>
 
             {/* Monospace Brief Body Render */}
-            <div className="p-4 bg-[#0F1E36] text-[#FAF8F5] border border-[#0F1E36] font-mono text-[11px] leading-relaxed overflow-x-auto max-h-[380px] space-y-2">
+            <div className="p-3.5 sm:p-4 bg-[#0F1E36] text-[#FAF8F5] border border-[#0F1E36] font-mono text-[11px] leading-relaxed overflow-x-auto max-h-[380px] space-y-2 break-words">
               <div className="text-[#B5893E] font-bold">
                 CHAMBER BRIEFING DOCKET
               </div>

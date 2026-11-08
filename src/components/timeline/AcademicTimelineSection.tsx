@@ -46,15 +46,15 @@ export const AcademicTimelineSection: React.FC = () => {
         </div>
 
         {/* --- PART 1: INTERACTIVE TIMELINE LEDGER (MASTER-DETAIL) --- */}
-        <div className="bg-[#FAF8F5] border border-[#DED8CE] p-6 sm:p-8 mb-12 shadow-xs">
-          <div className="flex items-center justify-between border-b border-[#DED8CE] pb-4 mb-6">
+        <div className="bg-[#FAF8F5] border border-[#DED8CE] p-5 sm:p-8 mb-12 shadow-xs">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#DED8CE] pb-4 mb-6">
             <div className="flex items-center gap-2">
-              <Calendar className="w-4 h-4 text-[#B5893E]" />
+              <Calendar className="w-4 h-4 text-[#B5893E] shrink-0" />
               <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#0F1E36]">
                 Judicial Research &amp; Chamber Training Chronology
               </h3>
             </div>
-            <span className="font-mono text-[11px] text-[#646B73]">
+            <span className="font-mono text-[10px] sm:text-[11px] text-[#646B73] self-start sm:self-auto">
               Chronological Ledger (2016 – 2022)
             </span>
           </div>
@@ -124,12 +124,12 @@ export const AcademicTimelineSection: React.FC = () => {
             </div>
 
             {/* Selected Milestone Dossier Container (7 cols) */}
-            <div className="lg:col-span-7 bg-[#F2EFE9] border border-[#DED8CE] p-6 sm:p-7 sticky top-28 animate-in fade-in duration-200">
-              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#DED8CE] pb-3 mb-4">
-                <span className="font-mono text-[11px] uppercase tracking-widest text-[#B5893E] font-semibold">
+            <div className="lg:col-span-7 bg-[#F2EFE9] border border-[#DED8CE] p-5 sm:p-7 sticky top-28 animate-in fade-in duration-200">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#DED8CE] pb-3 mb-4">
+                <span className="font-mono text-[10px] sm:text-[11px] uppercase tracking-widest text-[#B5893E] font-semibold">
                   {selectedMilestone.tag}
                 </span>
-                <span className="font-mono text-xs bg-[#FAF8F5] border border-[#DED8CE] px-2.5 py-0.5 text-[#0F1E36]">
+                <span className="font-mono text-[11px] sm:text-xs bg-[#FAF8F5] border border-[#DED8CE] px-2.5 py-0.5 text-[#0F1E36] self-start sm:self-auto">
                   {selectedMilestone.period}
                 </span>
               </div>
@@ -215,14 +215,14 @@ export const AcademicTimelineSection: React.FC = () => {
         </div>
 
         {/* --- PART 3: ADVANCED LEGAL RESEARCH TOOLS MASTERY BAND --- */}
-        <div className="mt-12 bg-[#0F1E36] text-[#FAF8F5] border border-[#DED8CE] p-6 sm:p-8">
+        <div className="mt-12 bg-[#0F1E36] text-[#FAF8F5] border border-[#DED8CE] p-5 sm:p-8">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
             <div className="space-y-2">
-              <span className="font-mono text-xs uppercase tracking-wider text-[#B5893E] font-semibold flex items-center gap-2">
-                <Database className="w-4 h-4 text-[#B5893E]" />
-                Institutional Legal Information Systems &amp; Case Law Informatics
+              <span className="font-mono text-[10px] sm:text-xs uppercase tracking-wider text-[#B5893E] font-semibold flex items-center gap-2">
+                <Database className="w-4 h-4 text-[#B5893E] shrink-0" />
+                <span>Institutional Legal Information Systems &amp; Case Law Informatics</span>
               </span>
-              <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#FAF8F5]">
+              <h4 className="font-serif text-lg sm:text-xl md:text-2xl font-bold text-[#FAF8F5]">
                 SCC Online &bull; Manupatra &bull; Westlaw India &bull; HeinOnline
               </h4>
               <p className="text-xs text-[#FAF8F5]/80 font-sans max-w-2xl leading-relaxed">
@@ -231,14 +231,14 @@ export const AcademicTimelineSection: React.FC = () => {
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-2 shrink-0">
-              <span className="font-mono text-xs bg-[#FAF8F5]/10 border border-[#FAF8F5]/20 px-3 py-1.5 text-[#FAF8F5]">
+            <div className="flex flex-wrap gap-2 w-full sm:w-auto shrink-0">
+              <span className="font-mono text-[11px] sm:text-xs bg-[#FAF8F5]/10 border border-[#FAF8F5]/20 px-2.5 py-1 sm:px-3 sm:py-1.5 text-[#FAF8F5]">
                 SCC Online Web
               </span>
-              <span className="font-mono text-xs bg-[#FAF8F5]/10 border border-[#FAF8F5]/20 px-3 py-1.5 text-[#FAF8F5]">
+              <span className="font-mono text-[11px] sm:text-xs bg-[#FAF8F5]/10 border border-[#FAF8F5]/20 px-2.5 py-1 sm:px-3 sm:py-1.5 text-[#FAF8F5]">
                 Manupatra Analytics
               </span>
-              <span className="font-mono text-xs bg-[#FAF8F5]/10 border border-[#FAF8F5]/20 px-3 py-1.5 text-[#FAF8F5]">
+              <span className="font-mono text-[11px] sm:text-xs bg-[#FAF8F5]/10 border border-[#FAF8F5]/20 px-2.5 py-1 sm:px-3 sm:py-1.5 text-[#FAF8F5]">
                 Westlaw International
               </span>
             </div>

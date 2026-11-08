@@ -28,21 +28,21 @@ export const HeroSection: React.FC<IHeroSectionProps> = ({ onOpenConsultation, o
           {/* Left Column (7 cols): Editorial Narrative & Advocacy Positioning */}
           <div className="lg:col-span-7 space-y-6 pt-2">
             {/* Monospace Eyebrow Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#F2EFE9] border border-[#DED8CE]">
-              <span className="w-2 h-2 rounded-full bg-[#B5893E]" />
-              <span className="font-mono text-[11px] font-semibold text-[#0F1E36] tracking-wider uppercase">
+            <div className="inline-flex max-w-full items-center gap-2 px-2.5 sm:px-3 py-1 bg-[#F2EFE9] border border-[#DED8CE]">
+              <span className="w-2 h-2 rounded-full bg-[#B5893E] shrink-0" />
+              <span className="font-mono text-[9.5px] xs:text-[10px] sm:text-[11px] font-semibold text-[#0F1E36] tracking-wider uppercase leading-snug">
                 ADVOCATE, HIGH COURT OF JUDICATURE AT ALLAHABAD
               </span>
             </div>
 
             {/* Main Editorial Headline */}
-            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[50px] text-[#0F1E36] font-bold tracking-tight leading-[1.12]">
+            <h1 className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[50px] text-[#0F1E36] font-bold tracking-tight leading-[1.18] sm:leading-[1.12]">
               Rigorous Constitutional &amp; Commercial Advocacy, Grounded in{' '}
               <span className="italic font-normal text-[#B5893E]">Doctoral Legal Scholarship.</span>
             </h1>
 
             {/* Lead Bio Paragraph */}
-            <p className="font-sans text-base sm:text-lg text-[#2C353D] leading-relaxed">
+            <p className="font-sans text-sm sm:text-base lg:text-lg text-[#2C353D] leading-relaxed">
               Dr. Utkarsh Pandey bridges high-stakes appellate litigation before the{' '}
               <strong>High Court of Judicature at Allahabad</strong> (Prayagraj and Lucknow Benches)
               with deep doctrinal jurisprudence. Combining an elite national law university pedigree—
@@ -53,32 +53,32 @@ export const HeroSection: React.FC<IHeroSectionProps> = ({ onOpenConsultation, o
               the Chamber delivers precision advocacy and strategic advisory.
             </p>
 
-            {/* Chamber Metrics & Authority Strip */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 py-5 border-y border-[#DED8CE] bg-[#F2EFE9]/40">
-              <div className="px-3 border-r border-[#DED8CE] last:border-none">
-                <span className="block font-mono text-xl sm:text-2xl font-bold text-[#0F1E36]">2 Benches</span>
-                <span className="block font-mono text-[10px] uppercase text-[#646B73] tracking-wider mt-0.5">
+            {/* Chamber Metrics & Authority Strip (Immaculate 2x2 on Mobile, 4x1 on sm+) */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-4 gap-x-2 sm:gap-4 py-4 sm:py-5 border-y border-[#DED8CE] bg-[#F2EFE9]/40">
+              <div className="px-2.5 sm:px-3 border-r border-[#DED8CE]">
+                <span className="block font-mono text-lg sm:text-2xl font-bold text-[#0F1E36]">2 Benches</span>
+                <span className="block font-mono text-[9px] sm:text-[10px] uppercase text-[#646B73] tracking-wider mt-0.5">
                   Prayagraj &amp; Lucknow
                 </span>
               </div>
 
-              <div className="px-3 border-r border-[#DED8CE] last:border-none">
-                <span className="block font-mono text-xl sm:text-2xl font-bold text-[#B5893E]">22</span>
-                <span className="block font-mono text-[10px] uppercase text-[#646B73] tracking-wider mt-0.5">
+              <div className="px-2.5 sm:px-3 sm:border-r border-[#DED8CE]">
+                <span className="block font-mono text-lg sm:text-2xl font-bold text-[#B5893E]">22</span>
+                <span className="block font-mono text-[9px] sm:text-[10px] uppercase text-[#646B73] tracking-wider mt-0.5">
                   Published Works
                 </span>
               </div>
 
-              <div className="px-3 border-r border-[#DED8CE] last:border-none">
-                <span className="block font-mono text-xl sm:text-2xl font-bold text-[#164E4B]">Ph.D.</span>
-                <span className="block font-mono text-[10px] uppercase text-[#646B73] tracking-wider mt-0.5">
+              <div className="px-2.5 sm:px-3 pt-3 sm:pt-0 border-t sm:border-t-0 border-r border-[#DED8CE]">
+                <span className="block font-mono text-lg sm:text-2xl font-bold text-[#164E4B]">Ph.D.</span>
+                <span className="block font-mono text-[9px] sm:text-[10px] uppercase text-[#646B73] tracking-wider mt-0.5">
                   Faculty of Law, LU
                 </span>
               </div>
 
-              <div className="px-3">
-                <span className="block font-mono text-xl sm:text-2xl font-bold text-[#0F1E36]">UGC-NET</span>
-                <span className="block font-mono text-[10px] uppercase text-[#646B73] tracking-wider mt-0.5">
+              <div className="px-2.5 sm:px-3 pt-3 sm:pt-0 border-t sm:border-t-0">
+                <span className="block font-mono text-lg sm:text-2xl font-bold text-[#0F1E36]">UGC-NET</span>
+                <span className="block font-mono text-[9px] sm:text-[10px] uppercase text-[#646B73] tracking-wider mt-0.5">
                   Qualified &bull; Law
                 </span>
               </div>

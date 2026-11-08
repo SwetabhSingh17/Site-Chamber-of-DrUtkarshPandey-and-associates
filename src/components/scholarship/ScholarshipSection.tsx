@@ -115,7 +115,7 @@ export const ScholarshipSection: React.FC = () => {
           </div>
 
           {/* Quick Metrics Badge */}
-          <div className="font-mono text-xs text-[#646B73] bg-[#F2EFE9] border border-[#DED8CE] p-4 text-right shrink-0">
+          <div className="font-mono text-xs text-[#646B73] bg-[#F2EFE9] border border-[#DED8CE] p-4 text-left sm:text-right w-full md:w-auto shrink-0">
             <div className="flex items-center justify-between gap-4 mb-1">
               <span>TOTAL CORPUS:</span>
               <span className="font-bold text-[#0F1E36]">22 WORKS</span>
@@ -209,52 +209,53 @@ export const ScholarshipSection: React.FC = () => {
         )}
 
         {/* --- INTERACTIVE CONTROLS BAR: SEARCH, CATEGORIES & VIEW MODE TOGGLE --- */}
-        <div className="bg-[#F2EFE9] border border-[#DED8CE] p-5 mb-8 space-y-4">
+        <div className="bg-[#F2EFE9] border border-[#DED8CE] p-4 sm:p-5 mb-8 space-y-4">
           <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
-            {/* View Mode Switcher: Top 6 vs Complete 22 */}
-            <div className="inline-flex items-center p-1 bg-[#FAF8F5] border border-[#DED8CE] self-start font-mono text-xs">
+            {/* View Mode Switcher: Top 6 vs Complete 22 (Mobile Responsive) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 w-full sm:w-auto p-1 bg-[#FAF8F5] border border-[#DED8CE] font-mono text-xs">
               <button
                 type="button"
                 onClick={() => setViewMode('featured')}
-                className={`px-3 py-1.5 transition-colors flex items-center gap-1.5 ${
+                className={`px-3 py-2 sm:py-1.5 transition-colors flex items-center justify-center gap-1.5 cursor-pointer text-center ${
                   viewMode === 'featured'
                     ? 'bg-[#0F1E36] text-[#FAF8F5] font-semibold'
                     : 'text-[#646B73] hover:text-[#0F1E36]'
                 }`}
               >
-                <Sparkles className="w-3.5 h-3.5 text-[#B5893E]" />
+                <Sparkles className="w-3.5 h-3.5 text-[#B5893E] shrink-0" />
                 <span>Featured View (Top 6)</span>
               </button>
 
               <button
                 type="button"
                 onClick={() => setViewMode('complete')}
-                className={`px-3 py-1.5 transition-colors flex items-center gap-1.5 ${
+                className={`px-3 py-2 sm:py-1.5 transition-colors flex items-center justify-center gap-1.5 cursor-pointer text-center ${
                   viewMode === 'complete'
                     ? 'bg-[#0F1E36] text-[#FAF8F5] font-semibold'
                     : 'text-[#646B73] hover:text-[#0F1E36]'
                 }`}
               >
-                <Layers className="w-3.5 h-3.5 text-[#B5893E]" />
-                <span>Complete Archive (All 22 Works)</span>
+                <Layers className="w-3.5 h-3.5 text-[#B5893E] shrink-0" />
+                <span>Complete Archive (22 Works)</span>
               </button>
             </div>
 
-            {/* Live Search Input */}
-            <div className="relative min-w-[320px] max-w-md w-full">
+            {/* Live Search Input (Full width on mobile, no min-w blowout) */}
+            <div className="relative w-full lg:max-w-md">
               <Search className="w-4 h-4 text-[#646B73] absolute left-3 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search by title, journal, ISSN, or subject..."
-                className="w-full pl-9 pr-3 py-2 text-xs font-sans bg-[#FAF8F5] border border-[#DED8CE] text-[#0F1E36] placeholder-[#646B73]/60 focus:outline-hidden focus:border-[#B5893E]"
+                className="w-full pl-9 pr-8 py-2 text-xs font-sans bg-[#FAF8F5] border border-[#DED8CE] text-[#0F1E36] placeholder-[#646B73]/60 focus:outline-hidden focus:border-[#B5893E]"
               />
               {searchQuery && (
                 <button
                   type="button"
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-xs text-[#646B73] hover:text-[#0F1E36]"
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-sm text-[#646B73] hover:text-[#0F1E36] p-1 cursor-pointer"
+                  aria-label="Clear Search"
                 >
                   &times;
                 </button>

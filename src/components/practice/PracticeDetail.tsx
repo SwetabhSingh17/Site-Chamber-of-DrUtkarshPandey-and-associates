@@ -16,11 +16,11 @@ export const PracticeDetail: React.FC<IPracticeDetailProps> = ({ practice, onSel
     <div className="bg-[#FAF8F5] border border-[#DED8CE] p-6 sm:p-8 animate-in fade-in duration-200">
       {/* Pillar Header */}
       <div className="border-b border-[#DED8CE] pb-5 mb-6">
-        <div className="flex items-center justify-between gap-3 mb-2">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
           <span className="font-mono text-xs uppercase tracking-widest text-[#B5893E] font-semibold">
             {practice.pillarNumber} &bull; Master Practice Framework
           </span>
-          <span className="font-mono text-[10px] text-[#646B73] px-2 py-0.5 bg-[#F2EFE9] border border-[#DED8CE] uppercase">
+          <span className="font-mono text-[10px] text-[#646B73] px-2 py-0.5 bg-[#F2EFE9] border border-[#DED8CE] uppercase self-start sm:self-auto">
             Active Registry Focus
           </span>
         </div>
@@ -134,7 +134,7 @@ export const PracticeDetail: React.FC<IPracticeDetailProps> = ({ practice, onSel
         <button
           type="button"
           onClick={() => onSelectForConsultation(practice.id)}
-          className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-[#0F1E36] hover:bg-[#1A2E4E] text-[#FAF8F5] text-xs font-mono uppercase tracking-wider border border-[#0F1E36] transition-all shrink-0 group"
+          className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-[#0F1E36] hover:bg-[#1A2E4E] text-[#FAF8F5] text-xs font-mono uppercase tracking-wider border border-[#0F1E36] transition-all w-full sm:w-auto shrink-0 group cursor-pointer text-center"
         >
           <span>Brief on this Pillar</span>
           <ArrowUpRight className="w-3.5 h-3.5 text-[#B5893E] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

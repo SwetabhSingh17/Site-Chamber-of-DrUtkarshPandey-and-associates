@@ -128,21 +128,21 @@ export const UpaLogo: React.FC<IUpaLogoProps> = ({
     return (
       <div className={`inline-flex flex-col items-center text-center ${className}`}>
         {MarkSvg}
-        <div className="mt-3 flex flex-col items-center">
-          <div className="flex items-center gap-1.5 flex-wrap justify-center">
+        <div className="mt-2.5 sm:mt-3 flex flex-col items-center">
+          <div className="flex items-center gap-1 sm:gap-1.5 flex-wrap justify-center">
             <span
-              className={`font-serif font-bold text-lg sm:text-xl tracking-tight uppercase leading-tight ${
+              className={`font-serif font-bold text-base sm:text-lg md:text-xl tracking-tight uppercase leading-snug sm:leading-tight ${
                 lightText ? 'text-[#FAF8F5]' : 'text-[#0F1E36]'
               }`}
             >
               Chamber of Dr. Utkarsh Pandey
             </span>
-            <span className="font-serif text-sm italic tracking-wide text-[#B5893E] font-medium">
+            <span className="font-serif text-xs sm:text-sm italic tracking-wide text-[#B5893E] font-medium">
               &amp; Associates
             </span>
           </div>
           <span
-            className={`font-mono text-[10px] sm:text-[11px] tracking-wider uppercase mt-1 ${
+            className={`font-mono text-[9px] sm:text-[10px] md:text-[11px] tracking-wider uppercase mt-1 ${
               lightText ? 'text-[#FAF8F5]/70' : 'text-[#646B73]'
             }`}
           >
@@ -155,24 +155,24 @@ export const UpaLogo: React.FC<IUpaLogoProps> = ({
 
   // Variant 3: Horizontal (Mark Left, Typography Right)
   return (
-    <div className={`inline-flex items-center gap-3.5 select-none ${className}`}>
+    <div className={`inline-flex items-center gap-2.5 sm:gap-3.5 select-none ${className}`}>
       {MarkSvg}
       <div className="flex flex-col text-left">
-        <div className="flex items-center gap-1.5 flex-wrap">
+        <div className="flex items-center gap-1 sm:gap-1.5 flex-wrap">
           <span
-            className={`font-serif font-bold text-base sm:text-lg tracking-tight uppercase leading-none ${
+            className={`font-serif font-bold text-xs sm:text-base lg:text-lg tracking-tight uppercase leading-tight sm:leading-none ${
               lightText ? 'text-[#FAF8F5]' : 'text-[#0F1E36]'
             }`}
           >
             Chamber of Dr. Utkarsh Pandey
           </span>
-          <span className="font-serif text-xs italic tracking-wider text-[#B5893E] font-medium">
+          <span className="font-serif text-[11px] sm:text-xs italic tracking-wider text-[#B5893E] font-medium leading-none">
             &amp; Associates
           </span>
         </div>
         <span
-          className={`font-mono text-[10px] sm:text-[11px] tracking-wider uppercase mt-1 ${
-            hideSubtitleOnLg ? 'hidden xl:block' : ''
+          className={`font-mono text-[9px] sm:text-[10px] xl:text-[11px] tracking-wider uppercase mt-0.5 sm:mt-1 ${
+            hideSubtitleOnLg ? 'hidden xl:block' : 'hidden sm:block'
           } ${lightText ? 'text-[#FAF8F5]/70' : 'text-[#646B73]'}`}
         >
           Advocate, High Court at Allahabad • Prayagraj &amp; Lucknow

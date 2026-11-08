@@ -79,12 +79,12 @@ export const Footer: React.FC<IFooterProps> = ({ onOpenBciDisclaimer }) => {
 
           {/* Dual Physical Offices: Prayagraj & Lucknow (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="flex items-center justify-between border-b border-[#FAF8F5]/10 pb-2">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#FAF8F5]/10 pb-3">
               <div className="text-[11px] font-mono uppercase tracking-widest text-[#B5893E] font-bold">
                 Physical Chamber Offices (Prayagraj &amp; Lucknow)
               </div>
-              <div className="bg-[#FAF8F5] p-1.5 border border-[#DED8CE] shadow-xs">
-                <UpaLogo variant="mark" markHeight="h-12" />
+              <div className="bg-[#FAF8F5] p-1.5 border border-[#DED8CE] shadow-xs self-start sm:self-auto">
+                <UpaLogo variant="mark" markHeight="h-10 sm:h-12" />
               </div>
             </div>
 
@@ -213,7 +213,7 @@ export const Footer: React.FC<IFooterProps> = ({ onOpenBciDisclaimer }) => {
         </div>
 
         {/* Bottom Legal Band */}
-        <div className="mt-8 pt-6 border-t border-[#FAF8F5]/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-[#FAF8F5]/60">
+        <div className="mt-8 pt-6 border-t border-[#FAF8F5]/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-[#FAF8F5]/60 text-center sm:text-left">
           <div>
             &copy; {new Date().getFullYear()} Chamber of Dr. Utkarsh Pandey and Associates. All rights reserved.
           </div>

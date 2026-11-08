@@ -56,36 +56,36 @@ export const ChambersRegistry: React.FC = () => {
           <button
             type="button"
             onClick={() => setSelectedOfficeId('prayagraj')}
-            className={`p-4 text-left sm:text-center transition-all flex items-center justify-center gap-2.5 relative ${
+            className={`p-3.5 sm:p-4 text-left sm:text-center transition-all flex items-center justify-start sm:justify-center gap-2.5 relative cursor-pointer ${
               selectedOfficeId === 'prayagraj'
                 ? 'bg-[#0F1E36] text-[#FAF8F5] font-semibold shadow-xs'
                 : 'text-[#2C353D] hover:bg-[#FAF8F5] hover:text-[#0F1E36]'
             }`}
           >
-            <MapPin className={`w-4 h-4 ${selectedOfficeId === 'prayagraj' ? 'text-[#B5893E]' : 'text-[#646B73]'}`} />
-            <span>Tab 1: Prayagraj Chamber (Principal Seat — Allahabad HC)</span>
+            <MapPin className={`w-4 h-4 shrink-0 ${selectedOfficeId === 'prayagraj' ? 'text-[#B5893E]' : 'text-[#646B73]'}`} />
+            <span className="leading-snug">Prayagraj Chamber (Principal Seat — Allahabad HC)</span>
           </button>
 
           <button
             type="button"
             onClick={() => setSelectedOfficeId('lucknow')}
-            className={`p-4 text-left sm:text-center border-t sm:border-t-0 sm:border-l border-[#DED8CE] transition-all flex items-center justify-center gap-2.5 relative ${
+            className={`p-3.5 sm:p-4 text-left sm:text-center border-t sm:border-t-0 sm:border-l border-[#DED8CE] transition-all flex items-center justify-start sm:justify-center gap-2.5 relative cursor-pointer ${
               selectedOfficeId === 'lucknow'
                 ? 'bg-[#0F1E36] text-[#FAF8F5] font-semibold shadow-xs'
                 : 'text-[#2C353D] hover:bg-[#FAF8F5] hover:text-[#0F1E36]'
             }`}
           >
-            <Compass className={`w-4 h-4 ${selectedOfficeId === 'lucknow' ? 'text-[#B5893E]' : 'text-[#646B73]'}`} />
-            <span>Tab 2: Lucknow Chamber (Lucknow Bench &amp; Advisory Desk)</span>
+            <Compass className={`w-4 h-4 shrink-0 ${selectedOfficeId === 'lucknow' ? 'text-[#B5893E]' : 'text-[#646B73]'}`} />
+            <span className="leading-snug">Lucknow Chamber (Lucknow Bench &amp; Advisory Desk)</span>
           </button>
         </div>
 
         {/* --- ACTIVE CHAMBER LOCATION CARD --- */}
-        <div className="bg-[#F2EFE9] border-2 border-[#0F1E36] p-6 sm:p-10 shadow-sm animate-in fade-in duration-200">
+        <div className="bg-[#F2EFE9] border-2 border-[#0F1E36] p-5 sm:p-10 shadow-sm animate-in fade-in duration-200">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             {/* Left 7 cols: Office Metadata & Jurisdictional Focus */}
             <div className="lg:col-span-7 space-y-5">
-              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#DED8CE] pb-3">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#DED8CE] pb-3">
                 <div>
                   <span className="font-mono text-xs uppercase tracking-wider text-[#B5893E] font-bold block">
                     {activeOffice.id === 'prayagraj' ? 'Principal Seat Registry' : 'Appellate Bench & Advisory'}
@@ -95,7 +95,7 @@ export const ChambersRegistry: React.FC = () => {
                   </h3>
                 </div>
 
-                <span className="font-mono text-[11px] bg-[#FAF8F5] border border-[#DED8CE] px-3 py-1 text-[#0F1E36]">
+                <span className="font-mono text-[11px] bg-[#FAF8F5] border border-[#DED8CE] px-3 py-1 text-[#0F1E36] self-start sm:self-auto">
                   Postal Code: {activeOffice.postalCode.split('–')[1]?.trim() || activeOffice.postalCode}
                 </span>
               </div>

@@ -19,6 +19,17 @@ export const PracticeMatrix: React.FC<IPracticeMatrixProps> = ({ onSelectForCons
   const selectedPractice: IPracticeArea =
     PRACTICE_AREAS.find((item) => item.id === selectedPillarId) || PRACTICE_AREAS[0];
 
+  const handleSelectPillar = (pillarId: string) => {
+    setSelectedPillarId(pillarId);
+    // On mobile screens, smoothly scroll to the detail container
+    if (typeof window !== 'undefined' && window.innerWidth < 1024) {
+      const detailEl = document.getElementById('practice-detail-view');
+      if (detailEl) {
+        detailEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  };
+
   return (
     <section id="practice-matrix" className="py-16 sm:py-24 bg-[#F2EFE9] border-b border-[#DED8CE]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,7 +67,7 @@ export const PracticeMatrix: React.FC<IPracticeMatrixProps> = ({ onSelectForCons
                 <button
                   key={pillar.id}
                   type="button"
-                  onClick={() => setSelectedPillarId(pillar.id)}
+                  onClick={() => handleSelectPillar(pillar.id)}
                   className={`w-full text-left p-4 sm:p-5 border transition-all duration-150 cursor-pointer relative ${
                     isSelected
                       ? 'bg-[#FAF8F5] border-[#0F1E36] shadow-sm'
@@ -106,7 +117,9 @@ export const PracticeMatrix: React.FC<IPracticeMatrixProps> = ({ onSelectForCons
                         isSelected ? 'text-[#B5893E] font-semibold' : 'text-[#646B73]'
                       }`}
                     >
-                      View Framework <ChevronRight className="w-3.5 h-3.5" />
+                      <span className="lg:hidden">View Details</span>
+                      <span className="hidden lg:inline">View Framework</span>
+                      <ChevronRight className="w-3.5 h-3.5" />
                     </span>
                   </div>
                 </button>
@@ -115,7 +128,7 @@ export const PracticeMatrix: React.FC<IPracticeMatrixProps> = ({ onSelectForCons
           </div>
 
           {/* Detail Column (Right 7 cols): Dynamic Detail Container */}
-          <div className="lg:col-span-7 sticky top-28">
+          <div id="practice-detail-view" className="lg:col-span-7 lg:sticky lg:top-28 scroll-mt-20 sm:scroll-mt-28">
             <PracticeDetail
               practice={selectedPractice}
               onSelectForConsultation={onSelectForConsultation}

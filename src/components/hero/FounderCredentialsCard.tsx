@@ -14,14 +14,14 @@ export const FounderCredentialsCard: React.FC = () => {
   return (
     <div className="bg-[#FAF8F5] border border-[#DED8CE] shadow-sm flex flex-col relative overflow-hidden">
       {/* Official UPA™ Monogram Masthead */}
-      <div className="bg-[#FAF8F5] py-5 px-4 border-b border-[#DED8CE] flex justify-center items-center">
-        <UpaLogo variant="stacked" markHeight="h-20" />
+      <div className="bg-[#FAF8F5] py-4 sm:py-5 px-4 border-b border-[#DED8CE] flex justify-center items-center">
+        <UpaLogo variant="stacked" markHeight="h-16 sm:h-20" />
       </div>
 
       {/* Dossier Header Strip */}
-      <div className="bg-[#0F1E36] text-[#FAF8F5] p-5 sm:p-6 border-b border-[#DED8CE]">
-        <div className="flex items-center justify-between gap-3 mb-2">
-          <span className="font-mono text-[10px] uppercase tracking-widest text-[#B5893E] font-semibold flex items-center gap-1.5">
+      <div className="bg-[#0F1E36] text-[#FAF8F5] p-4 sm:p-6 border-b border-[#DED8CE]">
+        <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+          <span className="font-mono text-[9px] sm:text-[10px] uppercase tracking-widest text-[#B5893E] font-semibold flex items-center gap-1.5">
             <Award className="w-3.5 h-3.5 text-[#B5893E]" />
             Dossier &bull; Founder &amp; Lead Counsel
           </span>
@@ -48,44 +48,44 @@ export const FounderCredentialsCard: React.FC = () => {
       </div>
 
       {/* Segmented Architectural Dossier Tabs */}
-      <div className="grid grid-cols-3 border-b border-[#DED8CE] bg-[#F2EFE9] text-xs font-mono">
+      <div className="grid grid-cols-3 border-b border-[#DED8CE] bg-[#F2EFE9] text-[10px] sm:text-xs font-mono">
         <button
           type="button"
           onClick={() => setActiveTab('degrees')}
-          className={`py-3 px-2 text-center border-r border-[#DED8CE] transition-all flex items-center justify-center gap-1.5 ${
+          className={`py-2.5 sm:py-3 px-1 sm:px-2 text-center border-r border-[#DED8CE] transition-all flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-1.5 cursor-pointer ${
             activeTab === 'degrees'
               ? 'bg-[#FAF8F5] text-[#0F1E36] font-semibold shadow-xs border-b-2 border-b-[#B5893E]'
               : 'text-[#646B73] hover:text-[#0F1E36] hover:bg-[#EAE6DF]'
           }`}
         >
-          <GraduationCap className="w-3.5 h-3.5 text-[#B5893E]" />
+          <GraduationCap className="w-3.5 h-3.5 text-[#B5893E] shrink-0" />
           <span>Alma Mater</span>
         </button>
 
         <button
           type="button"
           onClick={() => setActiveTab('mentorship')}
-          className={`py-3 px-2 text-center border-r border-[#DED8CE] transition-all flex items-center justify-center gap-1.5 ${
+          className={`py-2.5 sm:py-3 px-1 sm:px-2 text-center border-r border-[#DED8CE] transition-all flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-1.5 cursor-pointer ${
             activeTab === 'mentorship'
               ? 'bg-[#FAF8F5] text-[#0F1E36] font-semibold shadow-xs border-b-2 border-b-[#B5893E]'
               : 'text-[#646B73] hover:text-[#0F1E36] hover:bg-[#EAE6DF]'
           }`}
         >
-          <Building2 className="w-3.5 h-3.5 text-[#B5893E]" />
+          <Building2 className="w-3.5 h-3.5 text-[#B5893E] shrink-0" />
           <span>Mentorship</span>
         </button>
 
         <button
           type="button"
           onClick={() => setActiveTab('judicial')}
-          className={`py-3 px-2 text-center transition-all flex items-center justify-center gap-1.5 ${
+          className={`py-2.5 sm:py-3 px-1 sm:px-2 text-center transition-all flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-1.5 cursor-pointer ${
             activeTab === 'judicial'
               ? 'bg-[#FAF8F5] text-[#0F1E36] font-semibold shadow-xs border-b-2 border-b-[#B5893E]'
               : 'text-[#646B73] hover:text-[#0F1E36] hover:bg-[#EAE6DF]'
           }`}
         >
-          <BookOpen className="w-3.5 h-3.5 text-[#B5893E]" />
-          <span>Judicial / Net</span>
+          <BookOpen className="w-3.5 h-3.5 text-[#B5893E] shrink-0" />
+          <span>Judicial/Net</span>
         </button>
       </div>
 
@@ -192,7 +192,7 @@ export const FounderCredentialsCard: React.FC = () => {
       </div>
 
       {/* Dossier Footer Rule */}
-      <div className="mt-auto px-5 py-3.5 bg-[#F2EFE9] border-t border-[#DED8CE] flex items-center justify-between text-[11px] font-mono text-[#646B73]">
+      <div className="mt-auto px-4 sm:px-5 py-3 sm:py-3.5 bg-[#F2EFE9] border-t border-[#DED8CE] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-1 sm:gap-2 text-[10px] sm:text-[11px] font-mono text-[#646B73]">
         <span>REF: UPA/REG/HC-ALLD/2026</span>
         <span className="text-[#0F1E36] font-medium">Benches: Prayagraj &amp; Lucknow</span>
       </div>
