@@ -33,6 +33,16 @@
   --accent-teal: #164E4B;
   --text-charcoal: #2C353D;
   --text-muted: #646B73;
+
+  /* Golden Ratio (Phi φ ≈ 1.618) Easing Functions */
+  --ease-golden: cubic-bezier(0.162, 1, 0.382, 1);
+  --ease-golden-soft: cubic-bezier(0.236, 1, 0.382, 1);
+  --ease-golden-out: cubic-bezier(0.382, 0, 0.618, 1);
+}
+
+/* Golden Ratio fluid animation utility */
+.ease-golden {
+  transition-timing-function: cubic-bezier(0.162, 1, 0.382, 1);
 }
 
 /* Editorial typography defaults and smooth scroll */

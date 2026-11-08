@@ -1,6 +1,6 @@
 # Version History — Chamber of Dr. Utkarsh Pandey and Associates
 
-> **Current Version:** `1.1.1`  
+> **Current Version:** `1.2.0`  
 > **Release Date:** November 8, 2026  
 > **Repository:** [Site-Chamber-of-DrUtkarshPandey-and-associates](https://github.com/SwetabhSingh17/Site-Chamber-of-DrUtkarshPandey-and-associates)  
 > **Framework:** React 19 • Vite 8 • Tailwind CSS v4 • TypeScript • React Router v7
@@ -8,14 +8,42 @@
 ---
 
 ## 📋 Table of Contents
-- [Version 1.1.1 (Current)](#version-111-current--november-8-2026)
+- [Version 1.2.0 (Current)](#version-120-current--november-8-2026)
+- [Version 1.1.1](#version-111--november-8-2026)
 - [Version 1.1.0](#version-110--november-8-2026)
 - [Version 1.0.0 (Initial Release)](#version-100-initial-release--november-8-2026)
 - [Architecture & Standards](#architecture--standards)
 
 ---
 
-## Version 1.1.1 (Current) — November 8, 2026
+## Version 1.2.0 (Current) — November 8, 2026
+### Fluid Golden-Ratio ($\Phi \approx 1.618$) Mobile Menu & Icon Morphing Animation
+
+#### 1. Kinetic Golden-Ratio Easing Physics
+- **Golden Deceleration Curve**: Introduced custom timing curves (`cubic-bezier(0.162, 1, 0.382, 1)` and `cubic-bezier(0.236, 1, 0.382, 1)`) in `src/index.css` mapped to the logarithmic golden spiral ($\Phi \approx 1.618$), creating organic, human-like motion deceleration.
+- **Fibonacci Sequence Timing Intervals**: Set transition durations and stagger delays based on golden proportions:
+  - Touch interaction feedback: $162\text{ms}$
+  - Middle line collapse: $262\text{ms}$
+  - Diagonal rotation & settling envelope: $382\text{ms}$
+  - Total drawer expansion: $424\text{ms}$
+  - Settle boundary: $685\text{ms}$
+
+#### 2. Fluid 3-Line Hamburger-to-Cross Morphing Icon
+- **Continuous Geometric Morphing**: Replaced static icon swaps with custom SVG/CSS vector lines that morph in real-time on touch:
+  - Top bar translates $+7\text{px}$ down and rotates $45^\circ$, transitioning from Oxford Navy to Antique Gold (`#B5893E`).
+  - Middle bar rapidly scales to zero width (`scale-x-0 opacity-0`) at $262\text{ms}$.
+  - Bottom bar translates $-7\text{px}$ up and rotates $-45^\circ$, perfectly intersecting at the $y=8\text{px}$ midpoint to form a symmetrical close mark ($X$).
+- **Active State Feedback**: Tapping the icon triggers a tactile border bloom (`border-[#B5893E] bg-[#F2EFE9]`).
+
+#### 3. Continuous Height Expansion & Staggered Reveal
+- **GPU-Accelerated Grid Expansion**: Replaced abrupt `{mobileMenuOpen && ...}` DOM mounting with CSS `grid-rows-[0fr]` to `grid-rows-[1fr]` transition over $424\text{ms}$, ensuring butter-smooth expansion AND contraction when opening/closing.
+- **Fibonacci Cascading Item Entrances**: Each navigation link glides into place with a progressive Fibonacci stagger delay ($0\text{ms}, 42\text{ms}, 85\text{ms}, 138\text{ms}, 223\text{ms}$) with vertical offset transformation (`-translate-y-3` to `translate-y-0`).
+- **Soft Ambient Backdrop**: Integrated a blur overlay (`bg-[#0F1E36]/35 backdrop-blur-xs`) that fades in and out with golden deceleration and dismisses the drawer on tap.
+- **Architectural Accent Line**: Rendered a hairline gold gradient separator at the drawer base.
+
+---
+
+## Version 1.1.1 — November 8, 2026
 ### Comprehensive Mobile Content & Layout Alignment Overhaul
 
 #### 1. Horizontal Viewport Overflow Elimination
